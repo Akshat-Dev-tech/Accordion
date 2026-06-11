@@ -38,7 +38,8 @@ function App() {
      <h1>Accordion</h1>  
     {accordVals.map((accordion)=>(
       <>
-        <h4 className='title-hover' onClick={()=>{setShow((show)=>show===accordion.id ?null : accordion.id)}}>{accordion.title}</h4>
+        <h4 className='title-hover' onClick={()=>{setShow((show)=>show===accordion.id ? null : accordion.id)}}>{accordion.title}</h4>
+        <span>{show===accordion.id? '>':'<'}</span>
         <p className={accordion.id != show ? 'hide' : ''}>{accordion.content}</p>
       </>
     ))}
